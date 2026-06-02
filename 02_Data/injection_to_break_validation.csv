@@ -1,0 +1,9 @@
+injection_id,exception_type,expected_detection_rule,detected_break_count,cumulative_detected_exposure,detection_status
+0,Missing Cash Record,Cash Balance Variance,1275,1275000.0,DETECTED
+1,Fee Mismatch,Small Cash Variance,1233,3082.5,DETECTED
+2,Timing Difference,Timing Break,1,500.0,DETECTED
+3,Share Mismatch,Security Position Break,1127,1690500.0,DETECTED
+4,Duplicate Cash Record,Unexplained Cash Variance,1047,261750.0,DETECTED
+5,Missing Vendor File,File Completeness Control,1,0.0,DETECTED
+6,Dividend Mismatch,Income Variance,899,13934.5,DETECTED
+7,Wrong Account Posting,Offsetting Security Break across accounts,1,0.0,DETECTED

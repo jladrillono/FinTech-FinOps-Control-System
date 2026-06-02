@@ -1,0 +1,9 @@
+injection_id,exception_type,affected_table,account_id,affected_date,ticker,root_cause,impact_amount,impact_shares,expected_detection_rule,resolution_expectation
+0,Missing Cash Record,core.custodian_balances,1.0,2021-01-04,,Vendor file dropped a row,-1000.0,,Cash Balance Variance,Vendor to re-send file
+1,Fee Mismatch,core.custodian_balances,2.0,2021-02-15,,Custodian applied different fee schedule,-2.5,,Small Cash Variance,Reconcile and accept as operational loss
+2,Timing Difference,core.custodian_balances,3.0,2021-03-10,,T+1 Settlement delay on custodian side,-500.0,,Timing Break,Will clear automatically on T+1
+3,Share Mismatch,core.custodian_positions,4.0,2021-06-01,AAPL,Corporate action not processed internally,,10.0,Security Position Break,Operations to book corporate action
+4,Duplicate Cash Record,core.custodian_balances,5.0,2021-08-20,,Custodian sent file twice or duplicated row,250.0,,Unexplained Cash Variance,Reverse duplicate entry
+5,Missing Vendor File,ctl.vendor_files,,2021-09-01,,SFTP connection failed,,,File Completeness Control,Retry SFTP connection
+6,Dividend Mismatch,core.custodian_balances,6.0,2022-01-15,,Tax withholding applied differently,-15.5,,Income Variance,Review tax logic
+7,Wrong Account Posting,core.custodian_positions,7.0,2022-05-05,,Custodian mapped ticker to wrong sub-account,,,Offsetting Security Break across accounts,Submit correction to custodian

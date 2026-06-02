@@ -1,0 +1,77 @@
+check_id,input_file,check_name,check_status,failed_record_count,severity,issue_description,suggested_fix
+1,custodian_balances.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'custodian_balance_id' — no nulls found,No action required
+2,custodian_balances.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'account_id' — no nulls found,No action required
+3,custodian_balances.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'balance_date' — no nulls found,No action required
+4,custodian_balances.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'custodian_cash_balance' — no nulls found,No action required
+5,custodian_balances.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'currency' — no nulls found,No action required
+6,custodian_balances.csv,DUPLICATE_ID,PASS,0,INFO,'custodian_balance_id' — no duplicates found,No action required
+7,custodian_balances.csv,INVALID_DATE,PASS,0,INFO,'balance_date' -- all dates parsed successfully,No action required
+8,custodian_balances.csv,NON_NUMERIC_AMOUNT,PASS,0,INFO,'custodian_cash_balance' -- all values are numeric,No action required
+9,custodian_balances.csv,MISSING_ACCOUNT_ID,PASS,0,INFO,account_id -- no nulls or zero values found,No action required
+10,custodian_balances.csv,DUPLICATE_FULL_ROW,PASS,0,INFO,No fully duplicate rows found,No action required
+11,reconciliation_breaks.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'break_id' — no nulls found,No action required
+12,reconciliation_breaks.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'account_id' — no nulls found,No action required
+13,reconciliation_breaks.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'business_date' — no nulls found,No action required
+14,reconciliation_breaks.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'break_category' — no nulls found,No action required
+15,reconciliation_breaks.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'dollar_exposure' — no nulls found,No action required
+16,reconciliation_breaks.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'variance' — no nulls found,No action required
+17,reconciliation_breaks.csv,DUPLICATE_ID,PASS,0,INFO,'break_id' — no duplicates found,No action required
+18,reconciliation_breaks.csv,INVALID_DATE,PASS,0,INFO,'business_date' -- all dates parsed successfully,No action required
+19,reconciliation_breaks.csv,NON_NUMERIC_AMOUNT,PASS,0,INFO,'internal_value' -- all values are numeric,No action required
+20,reconciliation_breaks.csv,NON_NUMERIC_AMOUNT,PASS,0,INFO,'custodian_value' -- all values are numeric,No action required
+21,reconciliation_breaks.csv,NON_NUMERIC_AMOUNT,PASS,0,INFO,'variance' -- all values are numeric,No action required
+22,reconciliation_breaks.csv,NON_NUMERIC_AMOUNT,PASS,0,INFO,'dollar_exposure' -- all values are numeric,No action required
+23,reconciliation_breaks.csv,MISSING_ACCOUNT_ID,PASS,0,INFO,account_id -- no nulls or zero values found,No action required
+24,reconciliation_breaks.csv,INVALID_STATUS_VALUE,PASS,0,INFO,'break_category' -- all values are within approved list,No action required
+25,reconciliation_breaks.csv,DUPLICATE_FULL_ROW,PASS,0,INFO,No fully duplicate rows found,No action required
+26,reconciliation_breaks.csv,NULL_CRITICAL_FIELD,PASS,0,INFO,'account_id' -- no nulls found in critical field,No action required
+27,reconciliation_breaks.csv,NULL_CRITICAL_FIELD,PASS,0,INFO,'break_category' -- no nulls found in critical field,No action required
+28,reconciliation_breaks.csv,NULL_CRITICAL_FIELD,PASS,0,INFO,'dollar_exposure' -- no nulls found in critical field,No action required
+29,exception_log.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'exception_id' — no nulls found,No action required
+30,exception_log.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'account_id' — no nulls found,No action required
+31,exception_log.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'business_date' — no nulls found,No action required
+32,exception_log.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'break_type' — no nulls found,No action required
+33,exception_log.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'severity' — no nulls found,No action required
+34,exception_log.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'variance_amount' — no nulls found,No action required
+35,exception_log.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'root_cause' — no nulls found,No action required
+36,exception_log.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'status' — no nulls found,No action required
+37,exception_log.csv,DUPLICATE_ID,PASS,0,INFO,'exception_id' — no duplicates found,No action required
+38,exception_log.csv,INVALID_DATE,PASS,0,INFO,'business_date' -- all dates parsed successfully,No action required
+39,exception_log.csv,INVALID_DATE,PASS,0,INFO,'detected_date' -- all dates parsed successfully,No action required
+40,exception_log.csv,INVALID_DATE,PASS,0,INFO,'due_date' -- all dates parsed successfully,No action required
+41,exception_log.csv,NON_NUMERIC_AMOUNT,PASS,0,INFO,'variance_amount' -- all values are numeric,No action required
+42,exception_log.csv,NON_NUMERIC_AMOUNT,PASS,0,INFO,'dollar_exposure' -- all values are numeric,No action required
+43,exception_log.csv,NON_NUMERIC_AMOUNT,PASS,0,INFO,'aging_days' -- all values are numeric,No action required
+44,exception_log.csv,MISSING_ACCOUNT_ID,PASS,0,INFO,account_id -- no nulls or zero values found,No action required
+45,exception_log.csv,INVALID_STATUS_VALUE,PASS,0,INFO,'severity' -- all values are within approved list,No action required
+46,exception_log.csv,INVALID_STATUS_VALUE,PASS,0,INFO,'status' -- all values are within approved list,No action required
+47,exception_log.csv,DUPLICATE_FULL_ROW,PASS,0,INFO,No fully duplicate rows found,No action required
+48,exception_log.csv,NULL_CRITICAL_FIELD,PASS,0,INFO,'account_id' -- no nulls found in critical field,No action required
+49,exception_log.csv,NULL_CRITICAL_FIELD,PASS,0,INFO,'severity' -- no nulls found in critical field,No action required
+50,exception_log.csv,NULL_CRITICAL_FIELD,PASS,0,INFO,'root_cause' -- no nulls found in critical field,No action required
+51,exception_log.csv,NULL_CRITICAL_FIELD,PASS,0,INFO,'status' -- no nulls found in critical field,No action required
+52,vendor_files.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'source_file_id' — no nulls found,No action required
+53,vendor_files.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'file_name' — no nulls found,No action required
+54,vendor_files.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'source_system' — no nulls found,No action required
+55,vendor_files.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'receipt_status' — no nulls found,No action required
+56,vendor_files.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'record_count' — no nulls found,No action required
+57,vendor_files.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'expected_date' — no nulls found,No action required
+58,vendor_files.csv,DUPLICATE_ID,PASS,0,INFO,'source_file_id' — no duplicates found,No action required
+59,vendor_files.csv,INVALID_DATE,PASS,0,INFO,'expected_date' -- all dates parsed successfully,No action required
+60,vendor_files.csv,NON_NUMERIC_AMOUNT,PASS,0,INFO,'record_count' -- all values are numeric,No action required
+61,vendor_files.csv,NON_NUMERIC_AMOUNT,PASS,0,INFO,'control_total' -- all values are numeric,No action required
+62,vendor_files.csv,MISSING_ACCOUNT_ID,PASS,0,INFO,account_id column not applicable for this file,No action required
+63,vendor_files.csv,INVALID_STATUS_VALUE,PASS,0,INFO,'receipt_status' -- all values are within approved list,No action required
+64,vendor_files.csv,INVALID_STATUS_VALUE,PASS,0,INFO,'validation_status' -- all values are within approved list,No action required
+65,vendor_files.csv,DUPLICATE_FULL_ROW,PASS,0,INFO,No fully duplicate rows found,No action required
+66,raw_stock_transactions.csv,NULL_REQUIRED_FIELD,FAIL,1533,HIGH,"'ID' has 1,533 null values (46.5% of rows) in raw_stock_transactions.csv",Investigate upstream source for missing 'ID' values
+67,raw_stock_transactions.csv,NULL_REQUIRED_FIELD,PASS,0,INFO,'Transaction Date' — no nulls found,No action required
+68,raw_stock_transactions.csv,NULL_REQUIRED_FIELD,FAIL,440,HIGH,'Ticker' has 440 null values (13.3% of rows) in raw_stock_transactions.csv,Investigate upstream source for missing 'Ticker' values
+69,raw_stock_transactions.csv,NULL_REQUIRED_FIELD,FAIL,440,HIGH,'No. of shares' has 440 null values (13.3% of rows) in raw_stock_transactions.csv,Investigate upstream source for missing 'No. of shares' values
+70,raw_stock_transactions.csv,NULL_REQUIRED_FIELD,FAIL,440,HIGH,'Price / share' has 440 null values (13.3% of rows) in raw_stock_transactions.csv,Investigate upstream source for missing 'Price / share' values
+71,raw_stock_transactions.csv,DUPLICATE_ID,FAIL,1540,HIGH,"'ID' contains 1,540 duplicate values in raw_stock_transactions.csv",Deduplicate on 'ID'; investigate source for re-sends or join issues
+72,raw_stock_transactions.csv,INVALID_DATE,PASS,0,INFO,'Transaction Date' -- all dates parsed successfully,No action required
+73,raw_stock_transactions.csv,NON_NUMERIC_AMOUNT,PASS,0,INFO,'No. of shares' -- all values are numeric,No action required
+74,raw_stock_transactions.csv,NON_NUMERIC_AMOUNT,PASS,0,INFO,'Price / share' -- all values are numeric,No action required
+75,raw_stock_transactions.csv,MISSING_ACCOUNT_ID,PASS,0,INFO,account_id column not applicable for this file,No action required
+76,raw_stock_transactions.csv,DUPLICATE_FULL_ROW,FAIL,9,MEDIUM,9 fully duplicate rows detected in raw_stock_transactions.csv,Deduplicate before loading; investigate whether the file was loaded twice

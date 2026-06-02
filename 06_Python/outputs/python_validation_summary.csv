@@ -1,0 +1,4 @@
+run_date,input_file,records_tested,checks_performed,failed_checks,anomaly_count,high_risk_count,pass_rate,notes
+2026-05-30,"custodian_balances.csv, reconciliation_breaks.csv, exception_log.csv (+ optional: cash_transactions.csv, internal_ledger.csv)",55788,8,0,55788,5984,,"55,788 anomaly flags generated for review; 5,984 HIGH severity"
+2026-05-30,vendor_files.csv,63,6,63,0,63,0.0,63 validation issues; 63 HIGH severity
+2026-05-30,"custodian_balances.csv, reconciliation_breaks.csv, exception_log.csv, vendor_files.csv, raw_stock_transactions.csv",76,76,6,0,5,92.1,6 of 76 checks failed; 5 HIGH severity failures

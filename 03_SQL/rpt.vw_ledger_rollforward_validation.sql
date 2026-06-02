@@ -1,0 +1,5 @@
+SELECT TOP (1000) [validation_check]
+      ,[validation_status]
+      ,[failure_count]
+      ,[validation_notes]
+  FROM [FinOps_Control_System].[rpt].[vw_ledger_rollforward_validation]

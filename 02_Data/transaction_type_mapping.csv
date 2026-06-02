@@ -1,0 +1,14 @@
+raw_action,standardized_category,cash_impact_sign,security_impact_sign,fee_tax_treatment,needs_review
+Deposit,Deposit,1,0,Separate if fee present,No
+Withdrawal,Withdrawal,-1,0,Separate if fee present,No
+Market buy,Market Buy,-1,1,Include in net cash impact,No
+Market sell,Market Sell,1,-1,Include in net cash impact,No
+Interest on cash,Interest,1,0,N/A,No
+Dividend (Ordinary),Dividend,1,0,Gross up for withholding tax,No
+Dividend (Dividend),Dividend,1,0,Gross up for withholding tax,No
+Dividend (Bonus),Dividend,1,0,Gross up for withholding tax,No
+Dividend (Dividends paid by us corporations),Dividend,1,0,Gross up for withholding tax,No
+Dividend (Return of capital non us),Dividend,1,0,Gross up for withholding tax,No
+Dividend (Demerger),Adjustment,0,0,N/A,Yes
+Dividend (Ordinary manufactured payment),Dividend,1,0,Gross up for withholding tax,No
+Dividend (Dividends paid by foreign corporations),Dividend,1,0,Gross up for withholding tax,No

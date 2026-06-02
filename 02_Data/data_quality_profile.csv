@@ -1,0 +1,30 @@
+Column Name,Data Type (Pandas),Null Count,Null Percentage,Unique Values Count,Sample Values,Identified Issues
+Action,object,1,0.03%,14,"['Deposit', 'Market buy', 'Dividend (Ordinary)']",1 nulls (0.03%)
+Transaction Date,datetime64[ns],0,0.00%,669,"[Timestamp('2020-04-30 00:00:00'), Timestamp('2020-05-04 00:00:00'), Timestamp('2020-05-11 00:00:00')]",None
+Time,object,0,0.00%,2307,"[datetime.time(17, 20, 49), datetime.time(17, 21, 18), datetime.time(10, 43, 1)]",None
+Ticker,object,440,13.34%,85,"['PBCT', 'NG', 'T']",440 nulls (13.34%)
+Name,object,440,13.34%,84,"[""People's United Financial"", 'National Grid', 'AT&T']",440 nulls (13.34%)
+No. of shares,float64,440,13.34%,482,"[50.0, 1.0, 15.0]",440 nulls (13.34%)
+Price / share,float64,440,13.34%,1516,"[12.76, 929.8, 29.34]",440 nulls (13.34%)
+Currency (Price / share),object,440,13.34%,2,"['USD', 'GBX']",440 nulls (13.34%)
+Exchange rate,object,442,13.40%,1421,"[1.25847, 100, 1.24252]",442 nulls (13.40%)
+Result of Sell,float64,3012,91.30%,286,"[-0.76, 1.51, -42.36]",3012 nulls (91.30%); 162 negative values
+Currency (Result),object,1647,49.92%,1,['GBP'],1647 nulls (49.92%)
+Total (GBP),float64,0,0.00%,2609,"[1000.0, 506.96, 9.35]",3 negative values
+Currency (Total),object,0,0.00%,1,['GBP'],None
+Withholding tax,float64,2092,63.41%,414,"[0.98, 1.17, 0.31]",2092 nulls (63.41%)
+Currency (Withholding tax),object,2092,63.41%,2,"['USD', 'GBX']",2092 nulls (63.41%)
+Charge amount,object,2970,90.03%,111,"[1000, 9.35, 500]",2970 nulls (90.03%)
+Currency (Charge amount),object,2971,90.06%,1,['GBP'],2971 nulls (90.06%)
+Stamp duty reserve tax,float64,3240,98.21%,10,"[0.05, 1.4, 3.5]",3240 nulls (98.21%)
+Currency (Stamp duty reserve tax),object,3263,98.91%,5,"['GBP', 0, 0.02]",3263 nulls (98.91%)
+Notes,object,3036,92.03%,148,"['Free Shares Promotion', 'Transaction ID: 1855892174452842', 'Transaction ID: 4725898245125699']",3036 nulls (92.03%)
+ID,object,1533,46.47%,1760,"['71c8854b-7580-427e-a533-e8fba79e6db1', 'EOF194834082', 'e115471e-f0f2-46a9-a510-78e0ab283f2e']",1533 nulls (46.47%)
+Unnamed: 22,object,2347,71.14%,246,"['Transaction ID: 1839097703393373', 'Transaction ID: 1629101204542001', 'Transaction ID: 4756106398038715']",2347 nulls (71.14%)
+Unnamed: 23,object,2075,62.90%,336,"['2069752c-51d7-4604-a5b2-d3d47b215fe1', 'EOF738679570', 'EOF738760867']",2075 nulls (62.90%)
+Unnamed: 24,object,3070,93.06%,49,"['GBP', 0.68, 0.24]",3070 nulls (93.06%)
+Unnamed: 25,object,3095,93.82%,1,['GBP'],3095 nulls (93.82%)
+Unnamed: 26,object,3292,99.79%,1,['GBP'],3292 nulls (99.79%)
+Unnamed: 27,object,3291,99.76%,1,['GBP'],3291 nulls (99.76%)
+Entire Dataset,N/A,0,0.00%,3299,N/A,9 exact duplicate rows found
+ID,object,1533,46.47%,1760,N/A,6 duplicate IDs found

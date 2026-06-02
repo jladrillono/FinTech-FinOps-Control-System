@@ -1,0 +1,10 @@
+anomaly_type,severity,record_count,unique_accounts,total_amount,avg_balance,recommended_action
+EXCESS_CASH_BALANCE,MEDIUM,1231,1,0.0,42993.06,Confirm whether idle cash or posting error exists.
+HIGH_BREAK_CONCENTRATION_ACCOUNT,HIGH,3,3,3227250.0,,Prioritize reconciliation review for concentrated accounts.
+HIGH_BREAK_CONCENTRATION_CATEGORY,MEDIUM,2,0,5582.0,,Review systemic cause of dominant break category.
+HIGH_EXCEPTION_CONCENTRATION,HIGH,3,0,2403.0,,Perform root-cause review for recurring HIGH exceptions.
+LARGE_DAILY_CASH_MOVEMENT,HIGH,4,4,91380.05,15533.61,Review cash transactions supporting the movement.
+NEGATIVE_CASH_BALANCE,HIGH,5974,18,0.0,-6225.19,"Review funding, settlement timing, and injected breaks."
+NEGATIVE_CASH_BALANCE,MEDIUM,43898,48,0.0,-2009.1,"Review funding, settlement timing, and injected breaks."
+STATISTICAL_OUTLIER_IQR,LOW,4384,20,0.0,-153.68,Secondary review -- confirm balance is expected for this account.
+STATISTICAL_OUTLIER_Z_SCORE,LOW,289,5,0.0,609.79,Secondary review -- confirm balance is expected for this account.

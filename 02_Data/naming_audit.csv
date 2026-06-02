@@ -1,0 +1,28 @@
+issue_type,schema_name,object_name,column_name,type_desc
+COLUMN,raw,raw_stock_transactions,Action,COLUMN
+COLUMN,raw,raw_stock_transactions,Charge amount,COLUMN
+COLUMN,raw,raw_stock_transactions,Currency (Charge amount),COLUMN
+COLUMN,raw,raw_stock_transactions,Currency (Price / share),COLUMN
+COLUMN,raw,raw_stock_transactions,Currency (Result),COLUMN
+COLUMN,raw,raw_stock_transactions,Currency (Stamp duty reserve tax),COLUMN
+COLUMN,raw,raw_stock_transactions,Currency (Total),COLUMN
+COLUMN,raw,raw_stock_transactions,Currency (Withholding tax),COLUMN
+COLUMN,raw,raw_stock_transactions,Exchange rate,COLUMN
+COLUMN,raw,raw_stock_transactions,ID,COLUMN
+COLUMN,raw,raw_stock_transactions,Name,COLUMN
+COLUMN,raw,raw_stock_transactions,No. of shares,COLUMN
+COLUMN,raw,raw_stock_transactions,Notes,COLUMN
+COLUMN,raw,raw_stock_transactions,Price / share,COLUMN
+COLUMN,raw,raw_stock_transactions,Result of Sell,COLUMN
+COLUMN,raw,raw_stock_transactions,Stamp duty reserve tax,COLUMN
+COLUMN,raw,raw_stock_transactions,Ticker,COLUMN
+COLUMN,raw,raw_stock_transactions,Time,COLUMN
+COLUMN,raw,raw_stock_transactions,Total (GBP),COLUMN
+COLUMN,raw,raw_stock_transactions,Transaction Date,COLUMN
+COLUMN,raw,raw_stock_transactions,Unnamed: 22,COLUMN
+COLUMN,raw,raw_stock_transactions,Unnamed: 23,COLUMN
+COLUMN,raw,raw_stock_transactions,Unnamed: 24,COLUMN
+COLUMN,raw,raw_stock_transactions,Unnamed: 25,COLUMN
+COLUMN,raw,raw_stock_transactions,Unnamed: 26,COLUMN
+COLUMN,raw,raw_stock_transactions,Unnamed: 27,COLUMN
+COLUMN,raw,raw_stock_transactions,Withholding tax,COLUMN

@@ -1,0 +1,28 @@
+source_field_name,standardized_field_name,source_or_derived,recommended_sql_data_type,business_definition,business_use,transformation_rule,validation_rule,required_for_phase,notes
+Action,transaction_type,Source,nvarchar(50),"Type of transaction (e.g., Deposit, Market buy)",Transaction classification and rule assignment,Map to standard categories via transaction_type_mapping,Must be non-null and exist in mapping table,Phase 2,Critical for determining cash and security impact
+Transaction Date,transaction_date,Source,date,Date the transaction occurred,Time-series roll-forward logic,Cast to DATE,"Must be valid date, cannot be null",Phase 2,Required for daily balance calculation
+Time,transaction_time,Source,time,Time the transaction occurred,Intra-day ordering if needed,Cast to TIME,Must be valid time,Phase 2,Some records may have missing/default times
+Ticker,ticker,Source,nvarchar(20),Stock ticker symbol,Identify security for position tracking,Trim whitespace,"Required for buys, sells, dividends",Phase 2,Can be null for cash transactions
+Name,security_name,Source,nvarchar(255),Name of the company/security,Reporting and readability,Trim whitespace,None,Phase 2,
+No. of shares,shares,Source,"decimal(28,8)",Number of shares transacted,Security position roll-forward,Cast to DECIMAL. Absolute value.,Must be numeric >= 0,Phase 2,Can be null for cash transactions
+Price / share,price_per_share,Source,"decimal(19,6)",Price per share,Valuation and logic checks,Cast to DECIMAL,Must be numeric >= 0,Phase 2,Can be null for cash transactions
+Currency (Price / share),currency_price,Source,nvarchar(3),Currency of the price,Currency conversion context,Trim whitespace,Must be 3 chars,Phase 2,
+Exchange rate,exchange_rate,Source,"decimal(19,6)",Exchange rate used,FX calculations,Cast to DECIMAL,Numeric > 0 or null,Phase 2,"May contain 'Not available', needs TRY_CAST"
+Result of Sell,realized_result,Source,"decimal(19,4)",Realized gain/loss from sell,Reporting and tax,Cast to DECIMAL,Numeric,Phase 2,Usually null except for sells
+Currency (Result),currency_result,Source,nvarchar(3),Currency of the result,Reporting,Trim whitespace,None,Phase 2,
+Total (GBP),total_amount,Source,"decimal(19,4)",Total transaction amount in GBP,Cash balance roll-forward,Cast to DECIMAL,Must be numeric,Phase 2,Includes fees and taxes
+Currency (Total),currency_total,Source,nvarchar(3),Currency of total amount,Validation,Trim whitespace,Must be 'GBP',Phase 2,
+Withholding tax,withholding_tax,Source,"decimal(19,4)",Tax withheld on dividends,Tax reporting and cash impact,Cast to DECIMAL,Numeric >= 0,Phase 2,Usually applies to foreign dividends
+Currency (Withholding tax),currency_tax,Source,nvarchar(3),Currency of withholding tax,Reporting,Trim whitespace,None,Phase 2,
+Charge amount,charge_amount,Source,"decimal(19,4)",Fees or charges applied,Fee tracking,Cast to DECIMAL,Numeric,Phase 2,
+Currency (Charge amount),currency_charge,Source,nvarchar(3),Currency of charge,Reporting,Trim whitespace,None,Phase 2,
+Stamp duty reserve tax,stamp_duty,Source,"decimal(19,4)",UK tax on shares,Tax tracking,Cast to DECIMAL,Numeric,Phase 2,
+Currency (Stamp duty reserve tax),currency_stamp_duty,Source,nvarchar(3),Currency of stamp duty,Reporting,Trim whitespace,None,Phase 2,
+Notes,notes,Source,nvarchar(max),Additional transaction info,Exception investigation,Trim whitespace,None,Phase 2,
+ID,source_transaction_id,Source,nvarchar(100),Unique identifier from source,Deduplication and auditing,Trim whitespace,"Must be unique, not null",Phase 2,
+Unnamed: 22 to 27,N/A,Source,N/A,Misplaced data from export,None,Ignore or review for missing IDs,None,Phase 2,Likely due to unescaped commas in CSV/Excel
+N/A,transaction_id,Derived,"bigint IDENTITY(1,1)",Surrogate primary key,Primary key for core tables,Auto-increment,Must be unique,Phase 2,
+N/A,customer_id,Derived,int,Synthetic customer identifier,Link to customers,Assigned via logic/mapping,Must exist in customers table,Phase 2,
+N/A,account_id,Derived,int,Synthetic account identifier,Link to accounts,Assigned via logic/mapping,Must exist in accounts table,Phase 2,
+N/A,cash_impact,Derived,"decimal(19,4)",Amount affecting cash balance,Cash roll-forward,total_amount * cash_sign,Numeric,Phase 2,Calculated based on transaction type mapping
+N/A,security_impact,Derived,"decimal(28,8)",Shares affecting position,Security roll-forward,shares * security_sign,Numeric,Phase 2,Calculated based on transaction type mapping

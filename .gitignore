@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Large binary files (too large for Git — regenerate locally)
+04_Excel_Model/*.xlsx
+Power BI/*.pbix
+Stock Transactions Dataset/*.xlsx
+Stock Transactions Dataset/*.zip
+data/
+
+# Large CSV outputs (regenerate via pipeline)
+02_Data/custodian_positions.csv
+02_Data/custodian_balances.csv
+02_Data/exception_log.csv
+06_Python/outputs/anomaly_flags.csv
+
+# Scratch / utility scripts
+scratch/
+
+# Config
+pyrefly.toml
