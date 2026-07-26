@@ -43,7 +43,7 @@ The workflow includes:
 |---|---|
 | SQL layer | Schema scripts, staging/core/reporting layers, reconciliation views, validation queries |
 | Excel model | 16-tab workbook with dashboard, tie-outs, exception aging, control summary, reconciliation review, and validation tabs |
-| Power BI dashboard | 7-page report covering executive overview, cash, securities, exceptions, controls, validation, and Python monitoring |
+| Power BI dashboard | 10-page report covering executive overview, operational exposure, exceptions, cash, securities, controls, validation, Python monitoring, model QA, and metric definitions |
 | Python outputs | `anomaly_flags.csv`, `anomaly_summary.csv`, `data_quality_results.csv`, `python_validation_summary.csv`, `vendor_validation_results.csv` |
 | Documentation | README, Methodology, Data Flow, SQL Runbook, control documentation, screenshot package |
 
@@ -51,7 +51,7 @@ The workflow includes:
 
 The completed project produced a reviewable financial operations environment with measurable validation outputs:
 
-- Power BI dashboard includes **7 reporting pages**.
+- Power BI dashboard includes **10 reporting pages**.
 - Excel workbook includes **16 structured tabs**.
 - Python generated **55,788 anomaly flags**.
 - Python identified **5,984 high-risk anomalies**.

@@ -338,15 +338,18 @@ Power BI converts reconciliation and validation outputs into management-ready re
 
 ## Dashboard Pages
 
-The dashboard includes seven report pages:
+The dashboard includes ten report pages:
 
 1. Executive Overview
-2. Cash Monitoring
-3. Security Reconciliation
-4. Exception Management
-5. Controls
-6. Validation
-7. Python Validation & Anomaly Monitoring
+2. Operational Exposure Monitoring
+3. Exception Management
+4. Cash Monitoring
+5. Security Reconciliation
+6. Controls and Audit Readiness
+7. Validation Appendix
+8. Python Validation and Anomaly Monitoring
+9. Model QA Appendix
+10. Metric Definitions
 
 ## Dashboard Design Principles
 

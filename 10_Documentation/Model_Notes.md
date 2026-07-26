@@ -10,7 +10,7 @@ This Excel workbook is the operational review layer for the FinOps Reconciliatio
 
 ## Refresh Sequence
 1. `rebuild_pipeline.ps1` — Drops/rebuilds all tables, loads synthetic data, runs reconciliation, exports CSVs
-2. `build_excel_model.py` — Reads live SQL data + validation CSVs, generates `FinOps_Reconciliation_Model.xlsx`
+2. `06_Python/build_excel_model.py` — Reads live SQL data + validation CSVs, generates `FinOps_Reconciliation_Model.xlsx`
 
 **Never manually edit data tabs.** All values are overwritten on each rebuild.
 

@@ -22,12 +22,16 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 
-# Large binary files (too large for Git — regenerate locally)
+# Large binary files (regenerate locally)
 04_Excel_Model/*.xlsx
 Power BI/*.pbix
 Stock Transactions Dataset/*.xlsx
 Stock Transactions Dataset/*.zip
 data/
+
+# Keep only the canonical portfolio Power BI model in Git
+05_PowerBI/*.pbix
+!05_PowerBI/FinTech_FinOps_Control_Reconciliation_Dashboard.pbix
 
 # Large CSV outputs (regenerate via pipeline)
 02_Data/custodian_positions.csv
@@ -37,6 +41,10 @@ data/
 
 # Scratch / utility scripts
 scratch/
+tmp/
+.superpowers/
+05_PowerBI/.codex/
+05_PowerBI/.superpowers/
 
 # Config
 pyrefly.toml

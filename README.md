@@ -6,6 +6,12 @@ This project simulates a fintech financial operations control environment for an
 
 The goal of this project is to demonstrate how SQL Server, Excel, Power BI, Python, and control documentation can be used together to support financial operations, reconciliation, exception management, management reporting, and audit-ready evidence retention.
 
+## Featured Power BI Dashboard
+
+[Download the Power BI model](05_PowerBI/FinTech_FinOps_Control_Reconciliation_Dashboard.pbix) or [view the 10-page PDF](05_PowerBI/FinTech_FinOps_Control_Reconciliation_Dashboard.pdf).
+
+![FinTech FinOps Control and Reconciliation Dashboard - Executive Overview](05_PowerBI/FinTech_FinOps_Control_Reconciliation_Dashboard_Executive_Overview.png)
+
 ## Project Summary
 
 Built an end-to-end financial operations reconciliation system using SQL Server, Excel, Power BI, and Python to classify transaction activity, calculate ledger balances, simulate custodian records, identify reconciliation breaks, validate exceptions, and communicate operational risk through dashboard reporting and control documentation.
@@ -250,24 +256,20 @@ The Excel model supports formula-driven checks, tie-outs, exception aging, pass/
 
 The Power BI dashboard converts reconciliation outputs into executive reporting.
 
-Dashboard pages include:
+The current dashboard includes 10 pages:
 
 1. Executive Overview
-    
-2. Cash Monitoring
-    
-3. Security Reconciliation
-    
-4. Exception Management
-    
-5. Controls
-    
-6. Validation
-    
-7. Python Validation & Anomaly Monitoring
-    
+2. Operational Exposure Monitoring
+3. Exception Management
+4. Cash Monitoring
+5. Security Reconciliation
+6. Controls and Audit Readiness
+7. Validation Appendix
+8. Python Validation and Anomaly Monitoring
+9. Model QA Appendix
+10. Metric Definitions
 
-The dashboard highlights transaction volume, open exceptions, SLA issues, dollar exposure, root causes, control performance, data quality results, vendor issues, and Python anomaly outputs.
+The dashboard highlights transaction volume, open exceptions, SLA issues, dollar exposure, root causes, control performance, data quality results, vendor issues, Python anomaly outputs, KPI tie-outs, and metric definitions.
 
 ### 9. Python Validation and Anomaly Monitoring
 
@@ -328,7 +330,7 @@ The project produced a complete review environment across SQL, Excel, Power BI, 
 
 Selected project findings include:
 
-- Power BI dashboard includes 7 reporting pages.
+- Power BI dashboard includes 10 reporting pages.
     
 - Excel workbook includes 16 structured tabs.
     
@@ -353,6 +355,14 @@ The data quality issues were primarily tied to raw transaction data, including m
 
 Summarizes overall operational status, transaction volume, reconciliation breaks, open exceptions, over-SLA items, dollar exposure, and control performance.
 
+### Operational Exposure Monitoring
+
+Focuses management attention on unresolved exposure, aging, SLA risk, root-cause concentration, and the highest-priority action queue.
+
+### Exception Management
+
+Tracks open exceptions, aging buckets, SLA status, severity, owners, root causes, and unresolved exposure.
+
 ### Cash Monitoring
 
 Highlights cash-related issues such as negative balances, excess balances, large movements, cash variance, and unusual account activity.
@@ -361,21 +371,25 @@ Highlights cash-related issues such as negative balances, excess balances, large
 
 Shows security position mismatches, share quantity breaks, ticker-level issues, affected securities, and position exposure.
 
-### Exception Management
-
-Tracks open exceptions, aging buckets, SLA status, severity, owners, root causes, and unresolved exposure.
-
-### Controls
+### Controls and Audit Readiness
 
 Summarizes control performance, evidence readiness, process area, control owner, review status, and control pass/fail outcomes.
 
-### Validation
+### Validation Appendix
 
 Shows SQL, Excel, and reconciliation validation results, including injection testing and ledger roll-forward checks.
 
-### Python Validation & Anomaly Monitoring
+### Python Validation and Anomaly Monitoring
 
 Displays Python-generated anomaly counts, high-risk flags, data quality results, vendor validation results, and automated monitoring outputs.
+
+### Model QA Appendix
+
+Provides technical quality-assurance evidence for semantic-model checks and report validation.
+
+### Metric Definitions
+
+Documents metric definitions, thresholds, denominators, and management interpretation.
 
 ## Controls and Audit Readiness
 
@@ -433,10 +447,9 @@ FinTech-FinOps-Control-System/
 │
 ├── 02_Data/
 │   ├── Raw source files (raw_stock_transactions.csv, vendor_files.csv)
-│   ├── Reconciliation outputs (reconciliation_breaks.csv, exception_log.csv)
-│   ├── Custodian simulation exports (custodian_balances.csv, custodian_positions.csv)
+│   ├── Reconciliation output sample (reconciliation_breaks.csv)
 │   ├── Validation CSVs (injection_to_break_validation.csv, ledger_rollforward_validation.csv)
-│   └── Data dictionary and quality profile
+│   └── Data dictionary, mapping, naming audit, and quality profile
 │
 ├── 03_SQL/
 │   ├── Schema and database scripts (01–02)
@@ -449,20 +462,20 @@ FinTech-FinOps-Control-System/
 │   ├── rebuild_pipeline.ps1
 │   └── Data load and export scripts
 │
-├── 04_Excel_Model/
-│   └── FinOps_Reconciliation_Model.xlsx (programmatically generated)
+├── 05_PowerBI/
+│   ├── FinTech_FinOps_Control_Reconciliation_Dashboard.pbix
+│   ├── FinTech_FinOps_Control_Reconciliation_Dashboard.pdf
+│   ├── FinTech_FinOps_Control_Reconciliation_Dashboard_Executive_Overview.png
+│   └── README.md
 │
 ├── 06_Python/
 │   ├── anomaly_detection.py
+│   ├── build_excel_model.py
 │   ├── data_quality_checks.py
 │   ├── vendor_file_validation.py
 │   ├── run_all_validations.py
 │   ├── Python_Notes.md
-│   └── outputs/ (anomaly flags, validation summaries, data quality results)
-│
-├── 09_Project_Tracking/
-│   ├── Progress_Log.md
-│   └── Change_Log.md
+│   └── outputs/ (validation summaries and data quality results)
 │
 ├── 10_Documentation/
 │   ├── Methodology.md
@@ -470,17 +483,8 @@ FinTech-FinOps-Control-System/
 │   ├── Model_Notes.md
 │   ├── One_Page_Portfolio_Case_Study.md
 │   ├── Phase_5_Management_Summary.md
-│   ├── Financial Operations Dashboard.pdf
 │   └── Screenshots/
 │
-├── Power BI/
-│   └── Financial Operations Dashboard.pbix
-│
-├── Stock Transactions Dataset/
-│   └── Original source dataset files
-│
-├── build_excel_model.py
-├── Model_Notes.md
 ├── requirements.txt
 ├── LICENSE
 └── README.md
@@ -629,7 +633,7 @@ Dashboard KPIs depend on correct data types, relationships, DAX measures, and so
     
 - Developed a formula-driven Excel reconciliation workbook with tie-outs, exception aging, validation checks, control summaries, and dashboard outputs to support manual review and management reporting.
     
-- Created a Power BI dashboard with 7 report pages covering executive KPIs, cash monitoring, security reconciliation, exception management, controls, validation, and Python anomaly monitoring.
+- Created a 10-page Power BI dashboard covering executive KPIs, operational exposure, exception management, cash monitoring, security reconciliation, controls, validation, Python anomaly monitoring, model QA, and metric definitions.
     
 - Added Python validation outputs to flag data quality issues, vendor file exceptions, negative balances, excess balances, statistical outliers, and high-risk anomaly patterns.
     
